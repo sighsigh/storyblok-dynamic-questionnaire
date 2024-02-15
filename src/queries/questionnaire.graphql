@@ -1,0 +1,31 @@
+query simplePage($slug: String!) {
+  SimplepageItems(by_slugs: $slug) {
+    items {
+      content {
+        title
+        description
+        next_page {
+          cachedUrl
+        }
+      }
+    }
+  }
+}
+
+query questionnairePage($slug: String!) {
+  QuestionnairepageItems(by_slugs: $slug) {
+    items {
+      content {
+        _uid
+        identifier
+        component
+        questions
+        title
+        description
+        next_page {
+          cachedUrl
+        }
+      }
+    }
+  }
+}
