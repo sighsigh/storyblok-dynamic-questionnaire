@@ -12,7 +12,7 @@ const CheckboxGroup = ({ options, onChange }: CheckboxGroupProps) => {
       );
 
       if (matchingItemIndex > -1) {
-        // uncheck checkbox
+        // remove option
         const newItems = [...prevItems];
         newItems.splice(matchingItemIndex, 1);
         return newItems;

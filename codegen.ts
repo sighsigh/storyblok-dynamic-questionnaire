@@ -16,7 +16,7 @@ const config: CodegenConfig = {
         [import.meta.env.VITE_STORYBLOK_API_URL]: {
           headers: {
             token: import.meta.env.VITE_STORYBLOK_ACCESS_TOKEN,
-            version: "draft",
+            version: import.meta.env.VITE_STORYBLOK_VERSION,
           },
         },
       },

@@ -7,7 +7,7 @@ import { Suspense, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { SimplePageProps } from "./definitions";
 
-const SimplePageContent = ({ storyblokSlug, buttonText }: SimplePageProps) => {
+const PageContent = ({ storyblokSlug, buttonText }: SimplePageProps) => {
   const navigate = useNavigate();
 
   const { data } = useSimplePageSuspenseQuery({
@@ -54,7 +54,7 @@ export default function SimplePage(props: SimplePageProps) {
           </Box>
         }
       >
-        <SimplePageContent {...props} />
+        <PageContent {...props} />
       </Suspense>
     </BaseTemplate>
   );
