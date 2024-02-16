@@ -501,7 +501,7 @@ export const SimplePageDocument = gql`
  *   },
  * });
  */
-export function useSimplePageQuery(baseOptions: Apollo.QueryHookOptions<SimplePageQuery, SimplePageQueryVariables>) {
+export function useSimplePageQuery(baseOptions: Apollo.QueryHookOptions<SimplePageQuery, SimplePageQueryVariables> & ({ variables: SimplePageQueryVariables; skip?: boolean; } | { skip: boolean; }) ) {
         const options = {...defaultOptions, ...baseOptions}
         return Apollo.useQuery<SimplePageQuery, SimplePageQueryVariables>(SimplePageDocument, options);
       }
@@ -553,7 +553,7 @@ export const QuestionnairePageDocument = gql`
  *   },
  * });
  */
-export function useQuestionnairePageQuery(baseOptions: Apollo.QueryHookOptions<QuestionnairePageQuery, QuestionnairePageQueryVariables>) {
+export function useQuestionnairePageQuery(baseOptions: Apollo.QueryHookOptions<QuestionnairePageQuery, QuestionnairePageQueryVariables> & ({ variables: QuestionnairePageQueryVariables; skip?: boolean; } | { skip: boolean; }) ) {
         const options = {...defaultOptions, ...baseOptions}
         return Apollo.useQuery<QuestionnairePageQuery, QuestionnairePageQueryVariables>(QuestionnairePageDocument, options);
       }

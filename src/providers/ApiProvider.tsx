@@ -18,7 +18,7 @@ export default function ApiProvider({ children }: { children: ReactNode }) {
       headers: {
         ...headers,
         token: import.meta.env.VITE_STORYBLOK_ACCESS_TOKEN,
-        version: "draft",
+        version: import.meta.env.VITE_STORYBLOK_VERSION,
       },
     }));
 
